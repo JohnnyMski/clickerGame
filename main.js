@@ -47,7 +47,7 @@ function buyStuffMachine() {
 
 var mainGameLoop = window.setInterval(function () {
     getStuff(1)
-    document.getElementById("upgradeStuff").innerHTML = "Practice Stuff-Getting Technique (" + gameData.stuffUpgradeAmount + "). Cost: " + gameData.stuffUpgradeCost + " stuff"
+    document.getElementById("upgradeStuff").innerHTML = "Practice Stuff-Getting Technique (" + gameData.stuffUpgradeAmount + "). Cost: " + gameData.stuffUpgradeCost + " Stuff"
     document.getElementById("getMachine").innerHTML = "Build a Stuff-Gathering Machine out of Stuff (" + gameData.stuffMachineAmount + "). Cost: " + gameData.stuffMachineCost + " Stuff"
 }, 1000)
 
