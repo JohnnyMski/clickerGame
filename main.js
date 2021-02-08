@@ -12,12 +12,7 @@ var gameData = {
 }
 
 function getStuff(amount) {
-    if (amount == 0) {
-        gameData.stuff += gameData.stuffPerClick;
-    }
-    else {
-        gameData.stuff += gameData.idleStuff;
-    }
+    gameData.stuff += gameData.stuffPerClick;
     
     document.getElementById("stuffGot").innerHTML = gameData.stuff + " Stuff got";
     document.getElementById("upgradeStuff").innerHTML = "Practice Stuff-Getting Technique (" + gameData.stuffUpgradeAmount + "). Cost: " + gameData.stuffUpgradeCost + " stuff";
@@ -53,7 +48,6 @@ var mainGameLoop = window.setInterval(function () {
     diff = Date.now() - gameData.lastTick;
     gameData.lastTick = Date.now();
     gameData.stuff += gameData.idleStuff * (diff / 1000);
-    getStuff(1);
 }, 1000)
 
 var saveGameLoop = window.setInterval(function () {
