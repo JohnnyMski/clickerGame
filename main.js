@@ -45,7 +45,7 @@ function buyStuffMachine() {
 }
 
 var mainGameLoop = window.setInterval(function () {
-    diff = Date.now() - gameData.lastTick;
+    var diff = Date.now() - gameData.lastTick;
     gameData.lastTick = Date.now();
     gameData.stuff += gameData.idleStuff * (diff / 1000);
 }, 1000)
@@ -58,6 +58,9 @@ var savegame = JSON.parse(localStorage.getItem("stuffClickerSave"));
 if (savegame !== null) {
     if (gameData.update == 0) {
         gameData = savegame;
+    }
+    if (typeof savegame.lastTick !== "undefined") {
+        gameData.lastTick = savegame.lastTick;
     }
     
 }
