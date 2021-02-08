@@ -64,6 +64,7 @@ var mainGameLoop = window.setInterval(function () {
     diff = Date.now() - gameData.lastTick;
     gameData.lastTick = Date.now();
     gameData.stuff += gameData.idleStuff * (diff / 1000);
+    document.getElementById("stuffGot").innerHTML = gameData.stuff + " Stuff got";
 }, 1000)
 
 var saveGameLoop = window.setInterval(function () {
@@ -75,8 +76,4 @@ if (savegame !== null) {
     if (gameData.update == 0) {
         gameData = savegame;
     }
-    if (typeof savegame.lastTick !== "undefined") {
-        gameData.lastTick = savegame.lastTick;
-    }
-    
 }
