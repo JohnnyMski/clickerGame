@@ -28,7 +28,7 @@ function upgradeStuff() {
         gameData.stuffUpgradeAmount++
         gameData.stuffPerClick++
         gameData.stuffUpgradeCost *= 2
-        document.getElementById("upgradeStuff").innerHTML = "Practice Stuff-Getting Technique (" + gameData.stuffUpgradeAmount + "). Cost: " + gameData.stuffUpgradeCost + " stuff"
+        document.getElementById("upgradeStuff").innerHTML = "Practice Stuff-Getting Technique (" + gameData.stuffUpgradeAmount + "). Cost: " + gameData.stuffUpgradeCost + " Stuff"
         localStorage.setItem("stuffClickerSave", JSON.stringify(gameData))
     }
     
